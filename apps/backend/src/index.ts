@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const db = await createDb("../data/db.db");
+const db = await createDb();
 
 const provisionService = new ProvisionServiceImplementationTypeorm(db);
 
