@@ -1,0 +1,19 @@
+name: "demo2"
+services:
+  backend:
+    build:
+      dockerfile: dockerfile.backend
+      context: .
+    image: demo2-backend
+    container_name: demo2_backend
+    ports:
+      - "8080:3000"
+
+  frontend:
+    build:
+      dockerfile: dockerfile.frontend
+      context: .
+    image: demo2-frontend
+    container_name: demo2_frontend
+    ports:
+      - "5173:5173"
